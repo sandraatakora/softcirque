@@ -316,4 +316,8 @@ a:hover.bottom-nav, a:hover h1, a:hover h2, a:hover {
 /* TABLET */
 @media screen and (max-width: 850px) {
 
+#softcirque, #pointer-dot {
+    display: none;
+  }
+
 }
