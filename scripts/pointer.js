@@ -68,27 +68,27 @@
 
  // Softcirque follower
 
-// var mouseX = 0, mouseY = 0;
-// $(document).mousemove(function(e){
-//    mouseX = e.pageX;
-//    mouseY = e.pageY;
-// });
+var mouseX = 0, mouseY = 0;
+$(document).mousemove(function(e){
+   mouseX = e.pageX;
+   mouseY = e.pageY;
+});
 
-// // cache the selector
-// var follower = $("#softcirque");
-// var xp = 0;
-// var yp = 0;
+// cache the selector
+var follower = $("#softcirque");
+var xp = 0;
+var yp = 0;
 
-// var loop = setInterval(function(){
-//     var width = $(window).width();
-//     mouseX = Math.max(mouseX, 20);
-//     mouseX = Math.min(mouseX, width-20);
-//     // change 12 to alter damping higher is slower
-//     xp += (mouseX - xp) / 12;
-//     follower.css({left:xp});  
-//     yp += (mouseY - yp) / 12;
-//     follower.css({top:yp});    
-// }, 30);
+var loop = setInterval(function(){
+    var width = $(window).width();
+    mouseX = Math.max(mouseX, 20);
+    mouseX = Math.min(mouseX, width-20);
+    // change 12 to alter damping higher is slower
+    xp += (mouseX - xp) / 12;
+    follower.css({left:xp});  
+    yp += (mouseY - yp) / 12;
+    follower.css({top:yp});    
+}, 30);
 
 
 // IMAGE SLIDESHOW
@@ -163,20 +163,24 @@ class Slideshow {
 
 
   //menu
-
-
   $("#about").click(function() {
-    $("#aboutp").toggle();
+    $("#about").toggleClass("active");
+    $("#aboutp").toggleClass("hidden");
+    $("#img1").toggleClass("hidden");
   });
-
-//   $("#about").click(function() {
-//     $("#about").css("textAlign","left");
-//   });
 
   $("#play").click(function() {
-    $("#playp").toggle();
-    $("#gradient").toggle();
+    $("#play").toggleClass("active1");
+    $("#playp").toggleClass("hidden");
+    $("#img2").toggleClass("hidden");
   });
+
+//   $("#play").click(function() {
+//     $("#playp").toggle();
+//     $("#playp").css("text-align","left");
+//     $("#play").css("text-align","left");
+//   });
+
 
 
   
