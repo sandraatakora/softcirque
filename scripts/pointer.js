@@ -74,12 +74,18 @@ $(document).mousemove(function(e){
    mouseY = e.pageY;
 });
 
+
+
+
 // cache the selector
 var follower = $("#softcirque");
 var xp = 0;
 var yp = 0;
 
+
+
 var loop = setInterval(function(){
+  follower.delay(3000).fadeIn(2000);
     var width = $(window).width();
     mouseX = Math.max(mouseX, 20);
     mouseX = Math.min(mouseX, width-20);
@@ -89,6 +95,10 @@ var loop = setInterval(function(){
     yp += (mouseY - yp) / 12;
     follower.css({top:yp});    
 }, 30);
+
+//Fade out soft cirque
+
+$('.softcirque').delay(2000).fadeOut(2000);
 
 
 // IMAGE SLIDESHOW
