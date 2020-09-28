@@ -1,33 +1,20 @@
-/* 
-    This CSS file was created by OwL for use by pointer.js, 
-     witch can be found on https://seattleowl.com. 
-*/
+
+/* cursor color */
 
 #pointer-dot {
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 0;
-    border: 7px solid #000;
     position: fixed;
-    border-radius: 15px;
-    z-index: 3;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
     pointer-events: none;
-    transition: border-color 0.5s;
+    mix-blend-mode: difference;
+    z-index: 99;
+
+    transition: transform 0.2s;
+    -webkit-transition: -webkit-transform 0.2s;
 }
 
-#pointer-ring {
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 0;
-    padding: 15px;
-    border: 0px solid #000;
-    position: fixed;
-    border-radius: 0px;
-    z-index: 3;
-    pointer-events: none;
-}
 
 html {
     cursor: none !important;
