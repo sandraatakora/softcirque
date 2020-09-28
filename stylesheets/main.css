@@ -180,7 +180,7 @@ display: none;
 footer {
   position: fixed;
   width: 100%;
-  bottom: 50px;
+  bottom: 0px;
   
   z-index: 3;
 }
@@ -450,6 +450,10 @@ display:none;
   wrapper.mobile h2 {
     padding-top: 20px;
     padding-bottom: 10px;
+  }
+
+  footer {
+    bottom: 30px;
   }
 
   p {
